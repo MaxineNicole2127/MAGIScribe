@@ -1,9 +1,12 @@
 import Auth from "./components/Auth";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
+  const authToken = true;
   return (
     <div className="app-container">
-      <Auth/>
+      {!authToken && <Auth/>}
+      {authToken && <Dashboard/>}
     </div>
   )
 }
